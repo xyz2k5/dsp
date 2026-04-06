@@ -1,0 +1,42 @@
+clc;
+clf;
+n=-20:1:20;
+x1=1;x2=0;
+xi=x1.*(n==0)+x2.*(n~=0);
+subplot(4,2,1);
+plot2d3(n,xi);
+title("impulse sequence");
+x1=1;x2=0;
+xu=x1.*(n>=0)+x2.*(n<0);
+subplot(4,2,2);
+plot2d3(n,xu);
+title("unit step sequence");
+x1=n;x2=0;
+xr=x1.*(n>=0)+x2.*(n<0);
+subplot(4,2,3);
+plot2d3(n,xr);
+title("ramp sequence");
+x1=exp(-n);x2=0;
+xe=x1.*(n>=0)+x2.*(n<0);
+subplot(4,2,4);
+plot2d3(n,xe);
+title("exponential sequence");
+// -------- First Signal --------
+t1 = 20;
+f1 = 1/t1;
+x1 = sin(2 * %pi * f1 * n);
+subplot(4,2,5);
+plot2d3(n, x1);
+xtitle('First Signal');
+// -------- Second Signal --------
+t2 = 40;
+f2 = 1/t2;
+x2 = sin(2 * %pi * f2 * n);
+subplot(4,2,6);
+plot2d3(n, x2);
+xtitle('Second Signal');
+// -------- Sum of Signals --------
+xa = x1 + x2;
+subplot(4,2,7);
+plot2d3(n, xa);
+xtitle('Sum of First and Second Signal');
