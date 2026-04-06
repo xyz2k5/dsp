@@ -33,5 +33,5 @@ plot(fr,abs(hf),'r');
 xgrid();
 xlabel("Frequency (Hz)");
 ylabel("Gain");
-title("Analog Butterworth Low Pass Filter_0417");
+title("Analog Butterworth Low Pass Filter");
 
