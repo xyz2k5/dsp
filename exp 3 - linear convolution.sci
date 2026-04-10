@@ -4,7 +4,7 @@ x=[1,1,0,1];
 h=[2,3,1];
 N1=length(x);
 N2=length(h);
-N=max(N1,N2);
+N=N1+N2-1;
 x=[x,zeros(1,N-N1)];
 x=[x,x];
 subplot(3,1,1);
